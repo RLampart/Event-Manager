@@ -108,17 +108,17 @@ public class MainPlace extends JPanel {
     public static void music() {
         AudioInputStream ms;
         try {
-            ms = AudioSystem.getAudioInputStream(new File("nice song.wav"));
+            ms = AudioSystem.getAudioInputStream(new File("Event-Manager/nicesong.wav"));
             md = AudioSystem.getClip();
             md.open(ms);
             md.start();
             md.loop(-1);
         } catch (IOException e) {
-            System.out.println("x");
+            System.out.println(e.getMessage());
         } catch (UnsupportedAudioFileException e) {
-            System.out.println("y");
+            System.out.println(e.getMessage());
         } catch (LineUnavailableException e) {
-            System.out.println("z");
+            System.out.println(e.getMessage());
         }
 
     }
