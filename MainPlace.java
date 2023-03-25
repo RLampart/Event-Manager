@@ -108,7 +108,7 @@ public class MainPlace extends JPanel {
     public static void music() {
         AudioInputStream ms;
         try {
-            ms = AudioSystem.getAudioInputStream(new File("Event-Manager/nicesong.wav"));
+            ms = AudioSystem.getAudioInputStream(new File("Event-Manager/nicesong.wav")); //the file location must match for the song to be found.
             md = AudioSystem.getClip();
             md.open(ms);
             md.start();
